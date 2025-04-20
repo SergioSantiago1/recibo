@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Gerador de Recibo</h2>
+<form action="gerar-recibo.php" method="post">
+    <label>Nome do prestador:</label>
+    <input type="text" name="nome" required>
+
+    <label>CPF/RG:</label>
+    <input type="text" name="CPF/RG" required>
+
+    <label>Serviço prestado:</label>
+    <input type="text" name="servico" required>
+
+    <label>Valor (ex: R$ 1500,00):</label>
+    <input type="text" name="valor" id="valor" required>
+
+    <label>Data:</label>
+    <input type="date" name="data" required>
+
+    <button type="submit">Gerar Recibo</button>
+</form>
+</body>
+</html>
+
+<script src="gerar-recibo.js"></script>
